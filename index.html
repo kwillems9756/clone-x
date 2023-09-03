@@ -387,70 +387,13 @@
 <p id="mess"></p>
 <script src="lib/fontawesome/fontawesome.min.js"></script>
 <script src="lib/gsap/gsap.min.js"></script>
+
+<script src="js/cookies.js" defer></script>
+<script src="js/fontawesome-animations.js" defer></script>
+<script src="js/x-goto.js" defer></script>
+<script src="js/dropdown.js" defer></script>
 <script>
-    if (window.localStorage.getItem("CookieRead") === "true") {
-        document.getElementById("cookies").remove();
-    }
-
-    function removeCookies(allowCookie = false) {
-        if (allowCookie) {
-            window.localStorage.setItem("CookieRead", "true");
-        }
-        gsap.to("#cookies", {
-            y: window.innerHeight,
-            duration: 1
-        })
-        setTimeout(() => {
-            document.getElementById("cookies").remove();
-        }, 1000)
-    }
-
-    // allow for fontawesome animations to be used/triggered on hover
-    const fontawesomeIconHoverAnimationElements = document.querySelectorAll("[x-fontawesome-animate-hover]");
-    for(let fontawesomeIconHoverAnimationElement of fontawesomeIconHoverAnimationElements){
-        fontawesomeIconHoverAnimationElement.parentElement.addEventListener("mouseenter", () => {
-            fontawesomeIconHoverAnimationElement.classList.add("fa-"+fontawesomeIconHoverAnimationElement.getAttribute("x-fontawesome-animate-hover"));
-        })
-        fontawesomeIconHoverAnimationElement.parentElement.addEventListener("mouseleave", () => {
-            fontawesomeIconHoverAnimationElement.classList.remove("fa-"+fontawesomeIconHoverAnimationElement.getAttribute("x-fontawesome-animate-hover"));
-        })
-    }
-
-
-    // setup x-goto elements
-    const xGotoElements = document.querySelectorAll("[x-goto]");
-    for(let xGotoElement of xGotoElements){
-        xGotoElement.addEventListener("click", () => {
-            window.location.href = xGotoElement.getAttribute("x-goto");
-        })
-    }
-
     // setup animations for dropdown pointer
-    const dropdownPointerMoveAmount = 3;
-    const dropdownPointerMoveDuration = .5;
-    const dropdownNavElements = document.getElementsByClassName("dropdown-parent")
-    for(let dropdownNavElement of dropdownNavElements){
-        dropdownNavElement.addEventListener("mouseenter", () => {
-            const dropdownPointerElements = dropdownNavElement.getElementsByClassName("dropdown-pointer");
-            if(dropdownPointerElements === null || dropdownPointerElements.length < 1) return;
-            const dropdownPointerElement = dropdownPointerElements[0];
-            let leftMode = dropdownPointerElement.getAttribute("x-pointer-move") === "right";
-            let tl = gsap.timeline({delay: .5, repeat: 1});
-            tl.fromTo(dropdownPointerElement, {
-                y: 0,
-                x: 0
-            }, {
-                y: leftMode ? 0 : dropdownPointerMoveAmount,
-                x: leftMode ? dropdownPointerMoveAmount : 0,
-                duration: dropdownPointerMoveDuration/4
-            });
-            tl.to(dropdownPointerElement, {
-                y: 0,
-                x: 0,
-                duration: dropdownPointerMoveDuration/4
-            })
-        })
-    }
 
     // feed tmp content
     let p = document.getElementById("mess");
