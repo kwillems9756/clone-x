@@ -1,0 +1,98 @@
+/* hyperlink inside dropdown */
+.dropdown li>a {
+    transition: color .1s;
+    color: #ffdf91;
+
+    text-decoration: none;
+}
+.dropdown li:hover>a {
+    color: white;
+}
+
+/* title of the dropdown */
+.dropdown-title {
+    margin: 0;
+
+    font-weight: normal;
+    color: #ffdf91;
+}
+
+/* pointer resize */
+.dropdown-pointer {
+    height: 15px;
+}
+.dropdown-pointer-right {
+    position: absolute;
+    right: 15px;
+}
+
+/* games dropdown */
+
+*>.dropdown-games {
+    background-image: url(../images/menu-dropdown-woosh.webp),url(../images/menu-dropdown-overlay.webp),linear-gradient(180deg,#16668b,#003456) !important;
+    background-size: auto 100%,256px,auto !important;
+    background-blend-mode: normal,overlay,overlay !important;
+    width: fit-content !important;
+    padding: 20px 0 !important;
+}
+*:hover>.dropdown-games {
+    display: flex !important;
+}
+.dropdown-games-logo {
+    width: max(12vw, 100px);
+    transition: filter .25s;
+    filter: brightness(0.9);
+}
+*:hover>.dropdown-games-logo {
+    filter: brightness(1);
+}
+
+/* dropdown base styling */
+*>.dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    display: none;
+
+    background-blend-mode: overlay;
+    background-size: 256px,100%;
+    background-image: url(../images/menu-dropdown-overlay.webp),linear-gradient(180deg,#394766,#181c29);
+
+    -webkit-box-shadow: 10px 10px 57px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 57px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 57px -8px rgba(0,0,0,0.75);
+
+    width: 230px;
+    cursor: auto;
+}
+.dropdown-parent {
+    position: relative;
+}
+.dropdown-right {
+    top: 0;
+    left: 100%;
+}
+*:hover>.dropdown {
+    display: block;
+}
+
+/* dropdown item styling */
+.dropdown>* {
+    color: #ffdf91;
+    transition: color .1s;
+    padding: 10px 20px;
+
+    cursor: pointer;
+}
+.dropdown:not(.no-capitalize)>* {
+    text-transform: uppercase;
+}
+.dropdown:not(.dropdown-games)>*:hover {
+    color: white;
+    background: rgb(6,147,227);
+    background: linear-gradient(90deg, rgba(6,147,227,0) 0%, rgba(6,147,227,0.25) 15%, rgba(6,147,227,0.25) 85%, rgba(6,147,227,0) 100%);
+}

@@ -32,14 +32,41 @@
     <meta name="twitter:label2" content="Time to read" />
     <meta name="twitter:data2" content="Less than a minute" />
 
-    <link href="style.css" rel="stylesheet"/>
+    <link href="css/top-bar.css" rel="stylesheet"/>
+    <link href="css/dropdown.css" rel="stylesheet"/>
+    <link href="css/gold-button.css" rel="stylesheet"/>
+    <link href="css/cookies.css" rel="stylesheet"/>
+    <link href="css/util.css" rel="stylesheet"/>
+
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
 <header class="top-bar">
     <section class="title">
-        <div>
-            A
+        <div class="shop-buttons">
+                <button class="gold-button with-background gap-4 pointer" x-goto="https://www.ageofempires.com/buy-now#GamePass">
+                    <span class="xbox-play-with">Play<br />with</span>
+                    <img class="xbox-logo" src="images/xbox-logo.svg" alt="XBOX logo">
+                    <span>PC GAME PASS</span>
+                </button>
+            <div class="dropdown-parent">
+                <button class="gold-button with-background gap-4">
+                    <img class="treasure-chest-icon" src="images/icons/treasure-chest.svg" alt="Treasure Chest">
+                    <span class="font-size-large">Buy Now</span>
+                </button>
+                <ul class="dropdown most-front-layer top-bar-buy-now no-capitalize">
+                    <li>
+                        <a href="https://www.ageofempires.com/buy-now#AoE-IV">
+                            <i class="fa-solid fa-gamepad"></i> Games
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.ageofempires.com/buy-now#GearShop">
+                            <i class="fa-solid fa-shield-halved"></i> Gear
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div>
             <a href="https://www.ageofempires.com/">
@@ -58,7 +85,7 @@
     <section class="navs">
         <div class="dropdowns">
             <nav class="nav-container dropdown-parent">
-                <h3 class="dropdown-title">AGE INSIDER</h3>
+                <h3 class="dropdown-title"><i class="fa-solid fa-flag"></i> AGE INSIDER</h3>
                 <img class="dropdown-pointer" src="images/icons/aoe4-dropdown-icon.svg" alt="Dropdown">
                 <ul class="dropdown">
                     <li>
@@ -86,10 +113,14 @@
                         <div class="dropdown-parent">
                             <img class="dropdown-games-logo" src="images/game-logos/age1.webp" alt="Age of Empires 1">
                             <ul class="dropdown">
-                                <li>Game Info</li>
                                 <li>
-                                    <!-- TODO: Icon -->
-                                    Forums
+                                    <a href="https://www.ageofempires.com/games/aoe/">Game Info</a>
+                                </li>
+                                <li>
+                                    <a href="https://forums.ageofempires.com/c/age-of-empires-i">
+                                        <i class="fa-solid fa-comments"></i>
+                                        Forums
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -98,21 +129,39 @@
                         <div class="dropdown-parent">
                             <img src="images/game-logos/age2.webp" alt="Age of Empires 2" class="dropdown-games-logo" />
                             <ul class="dropdown">
-                                <li>Game Info</li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/games/aoeiide/">Game Info</a>
+                                </li>
                                 <li class="dropdown-parent">
                                     <span>Expansions</span>
                                     <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
                                     <ul class="dropdown dropdown-right">
-                                        <li>Return of Rome</li>
-                                        <li>Dynasties of India</li>
-                                        <li>Lords of the West</li>
-                                        <li>Dawn of the Dukes</li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiide/return-of-rome/">Return of Rome</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiide/dynasties-of-india/">Dynasties of India</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiide/lords-of-the-west/">Lords of the West</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiide/dawn-of-the-dukes/">Dawn of the Dukes</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>PC Learn to Play</li>
-                                <li>XBOX Learn to Play</li>
-                                <li>Accessibility</li>
-                                <li>Forums</li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/learn-to-play/getting-started-aoe2/?src=hm">PC Learn to Play</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/learn-to-play/learn-to-play-xbox/?src=hm">XBOX Learn to Play</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/age-ii-de-accessibility/">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a href="https://forums.ageofempires.com/c/age-of-empires-ii/aoe2-de">Forums</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -124,14 +173,26 @@
                                     <span>Game Info</span>
                                     <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
                                     <ul class="dropdown dropdown-right">
-                                        <li>Knights of the Mediterranean</li>
-                                        <li>Mexico Civilizations</li>
-                                        <li>The African Royals</li>
-                                        <li>US Civilizations</li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiiide/knights-of-the-mediterranean/">Knights of the Mediterranean</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiiide/mexico-civilization/">Mexico Civilizations</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiiide/the-african-royals">The African Royals</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/aoeiiide/united-states-civilization/">US Civilizations</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>Accessibility</li>
-                                <li>Forums</li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/age-iii-de-accessibility/">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a href="https://forums.ageofempires.com/c/age-of-empires-iii">Forums</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -143,20 +204,32 @@
                                     <span>Game Info</span>
                                     <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
                                     <ul class="dropdown dropdown-right">
-                                        <li>Civilizations</li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/games/age-of-empires-iv/civilizations/">Civilizations</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>XBOX Learn to Play</li>
+                                <li>
+                                    <a href="https://aoe.ms/IV-xbox-learn-to-play">XBOX Learn to Play</a>
+                                </li>
                                 <li class="dropdown-parent">
                                     <span>Accessibility</span>
                                     <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
                                     <ul class="dropdown dropdown-right">
-                                        <li>Accessibility on PC</li>
-                                        <li>Accessibility on XBOX</li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/age-iv-accessibility/">Accessibility on PC</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.ageofempires.com/age-iv-on-xbox-accessibility-options/">Accessibility on XBOX</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li>Forums</li>
-                                <li>Uarizona Credit</li>
+                                <li>
+                                    <a href="https://forums.ageofempires.com/c/age-of-empires-iv">Forums</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/university-of-arizona/">Uarizona Credit</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -164,8 +237,12 @@
                         <div class="dropdown-parent">
                             <img class="dropdown-games-logo" src="images/game-logos/ageM.webp" alt="Age of Myths">
                             <ul class="dropdown">
-                                <li>Game Info</li>
-                                <li>Forums</li>
+                                <li>
+                                    <a href="https://www.ageofempires.com/games/aom/">Game Info</a>
+                                </li>
+                                <li>
+                                    <a href="https://forums.ageofempires.com/c/age-of-mythology">Forums</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -196,11 +273,8 @@
                         </a>
                     </li>
                     <li class="dropdown-parent">
-                        <a href="#">
-                            <!-- TODO: Stats icon & Links & enz... -->
-                            <span>Stats</span>
-                            <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
-                        </a>
+                        <span><i class="fa-solid fa-chart-line"></i> Stats</span>
+                        <img src="images/icons/aoe4-dropdown-icon-right.svg" alt="Dropdown right" x-pointer-move="right" class="dropdown-pointer dropdown-pointer-right">
                         <ul class="dropdown dropdown-right">
                             <li class="dropdown-parent">
                                 <span>Age of Empires: DE</span>
@@ -281,12 +355,12 @@
                 </ul>
             </nav>
             <nav class="nav-container dropdown-parent">
-                <a href="#">SUPPORT</a>
+                <a href="https://support.ageofempires.com/"><i x-fontawesome-animate-hover="spin" class="fa-solid fa-compass"></i> SUPPORT</a>
             </nav>
         </div>
         <a href="#">
             <span>SIGN IN</span>
-            <!-- TODO: SignIn Icon -->
+            <i x-fontawesome-animate-hover="bounce" class="fa-solid fa-dungeon"></i>
         </a>
     </section>
 </header>
@@ -331,11 +405,30 @@
         }, 1000)
     }
 
+    // allow for fontawesome animations to be used/triggered on hover
+    const fontawesomeIconHoverAnimationElements = document.querySelectorAll("[x-fontawesome-animate-hover]");
+    for(let fontawesomeIconHoverAnimationElement of fontawesomeIconHoverAnimationElements){
+        fontawesomeIconHoverAnimationElement.parentElement.addEventListener("mouseenter", () => {
+            fontawesomeIconHoverAnimationElement.classList.add("fa-"+fontawesomeIconHoverAnimationElement.getAttribute("x-fontawesome-animate-hover"));
+        })
+        fontawesomeIconHoverAnimationElement.parentElement.addEventListener("mouseleave", () => {
+            fontawesomeIconHoverAnimationElement.classList.remove("fa-"+fontawesomeIconHoverAnimationElement.getAttribute("x-fontawesome-animate-hover"));
+        })
+    }
+
+
+    // setup x-goto elements
+    const xGotoElements = document.querySelectorAll("[x-goto]");
+    for(let xGotoElement of xGotoElements){
+        xGotoElement.addEventListener("click", () => {
+            window.location.href = xGotoElement.getAttribute("x-goto");
+        })
+    }
+
     // setup animations for dropdown pointer
     const dropdownPointerMoveAmount = 3;
     const dropdownPointerMoveDuration = .5;
     const dropdownNavElements = document.getElementsByClassName("dropdown-parent")
-    console.log(dropdownNavElements)
     for(let dropdownNavElement of dropdownNavElements){
         dropdownNavElement.addEventListener("mouseenter", () => {
             const dropdownPointerElements = dropdownNavElement.getElementsByClassName("dropdown-pointer");

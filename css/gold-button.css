@@ -1,0 +1,47 @@
+.gold-button {
+    padding: 0 16px;
+    border: 1px solid #fcdb8d;
+    background: rgb(184,133,59);
+    background: linear-gradient(0deg, rgba(184,133,59,1) 0%, rgba(252,219,141,1) 100%);
+    position: relative;
+    clip-path: inset(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gold-button.with-background {
+    background-image: url(../images/button-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gold-button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+.gold-button:hover::after {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    transition: width .75s, height .75s, opacity .75s;
+}
+
+.treasure-chest-icon {
+    height: 30px;
+}
+.xbox-logo {
+    height: 13px;
+}
+.gap-4{
+    gap: 4px;
+}
+.xbox-play-with {
+    font-size: 8px;
+    padding-right: 5px;
+}

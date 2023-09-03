@@ -1,0 +1,42 @@
+.cookies {
+    font-family: Segoe UI, SegoeUI, Arial, sans-serif;
+
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+
+    background-color: #F2F2F2;
+    color: black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cookies > div {
+    max-width: 50%;
+}
+.cookies > .info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cookies > .info a {
+    color: #0067B8;
+}
+.cookies > .actions {
+    display: flex;
+    gap: 10px;
+}
+.cookies > .actions button {
+    background-color: #EBEBEB;
+    color: black;
+    padding: 10px;
+    width: 150px;
+
+    border: none;
+    transition: box-shadow .1s, color .1s;
+}
+.cookies > .actions button:hover {
+    box-shadow: 0 0 15px #aaa;
+    background-color: #d9d9d9;
+}
