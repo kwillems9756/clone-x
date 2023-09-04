@@ -6,16 +6,18 @@ const maxSlides = 7;
 
 leftNavElement.addEventListener("click", () => {
     currentNavSlide -= 1;
+    autoNext = false;
     onNavUtils();
 });
 rightNavElement.addEventListener("click", () => {
     currentNavSlide += 1;
+    autoNext = false;
     onNavUtils();
 })
 
 const documentRoot = document.querySelector(":root");
 function onNavUtils() {
-    currentNavSlide = currentNavSlide % (maxSlides);
+    currentNavSlide = ((currentNavSlide % maxSlides) + maxSlides) % maxSlides;
     documentRoot.style.setProperty("--news-carousel-slide-id", currentNavSlide.toString());
     updateSliderButtons();
 }
@@ -34,6 +36,16 @@ function updateSliderButtons() {
 }
 
 function gotoSliderTab(id) {
+    autoNext = false;
     currentNavSlide = id;
     onNavUtils();
 }
+
+let autoNext = true;
+function autoNavNext() {
+    if(!autoNext) return;
+    currentNavSlide += 1;
+    onNavUtils();
+    setTimeout(autoNavNext, 5000)
+}
+setTimeout(autoNavNext, 5000)
