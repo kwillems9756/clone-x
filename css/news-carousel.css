@@ -1,0 +1,78 @@
+:root {
+    --news-carousel-slide-id: 0;
+}
+
+.carousel-left,.carousel-right {
+    transition: filter .2s;
+}
+.carousel-right {
+    transform: rotate(-90deg);
+}
+.carousel-left {
+    transform: rotate(90deg);
+}
+.carousel-left:hover,.carousel-right:hover {
+    filter: brightness(0.75);
+}
+
+section.news-carousel {
+    position: relative;
+    width: 100vw;
+    height: 43vw;
+    overflow: hidden;
+}
+section.news-carousel>.carousel-left,.carousel-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+section.news-carousel>.carousel-left {
+    left: 10px;
+}
+section.news-carousel>.carousel-right {
+    right: 10px;
+}
+
+.news-items {
+    position: absolute;
+    transition: left 1s;
+    left: calc((-100vw) * var(--news-carousel-slide-id));
+    display: flex;
+}
+.news-items img {
+    width: 100vw;
+}
+
+.goto-slide {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.select-new-slide {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #e7c067;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.select-new-slide.selected::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e7c067;
+    border-radius: 50%;
+}

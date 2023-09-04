@@ -35,6 +35,7 @@
     <link href="css/top-bar.css" rel="stylesheet"/>
     <link href="css/dropdown.css" rel="stylesheet"/>
     <link href="css/gold-button.css" rel="stylesheet"/>
+    <link href="css/news-carousel.css" rel="stylesheet"/>
     <link href="css/cookies.css" rel="stylesheet"/>
     <link href="css/util.css" rel="stylesheet"/>
 
@@ -46,7 +47,7 @@
         <div class="shop-buttons">
                 <button class="gold-button with-background gap-4 pointer" x-goto="https://www.ageofempires.com/buy-now#GamePass">
                     <span class="xbox-play-with">Play<br />with</span>
-                    <img class="xbox-logo" src="images/xbox-logo.svg" alt="XBOX logo">
+                    <i class="fa-brands fa-xbox"></i>
                     <span>PC GAME PASS</span>
                 </button>
             <div class="dropdown-parent">
@@ -364,6 +365,31 @@
         </a>
     </section>
 </header>
+<main>
+    <section class="news-carousel">
+        <div class="news-items">
+            <img src="images/news/AgeIV_Steam_Strategy_Fest_3840x1646-1.webp" alt="Steam Strategy Fest" />
+            <img src="images/news/AgeIV_Console_WebCarousel_Banner_4k.webp" alt="Age4 Xbox" />
+            <img src="images/news/AgeIV_S5_Map_Monsters_SPE_WebCarousel_Banner_4K.jpg" alt="Age4 Monsters" />
+            <img src="images/news/ageii_ror_desktop_order.webp" alt="Return of Rome" />
+            <img src="images/news/slide-age2-l2p-4k.webp" alt="Learn to play Age2" />
+            <img src="images/news/slide-age2console-outnow-4k.webp" alt="Age2 out on Xbox" />
+            <img src="images/news/slide-219-25thcollection-4k-scaled.webp" alt="Age of Empires 25 years" />
+        </div>
+        <div class="goto-slide">
+            <button onclick="gotoSliderTab(0)" class="select-new-slide selected"></button>
+            <button onclick="gotoSliderTab(1)" class="select-new-slide"></button>
+            <button onclick="gotoSliderTab(2)" class="select-new-slide"></button>
+            <button onclick="gotoSliderTab(3)" class="select-new-slide"></button>
+            <button onclick="gotoSliderTab(4)" class="select-new-slide"></button>
+            <button onclick="gotoSliderTab(5)" class="select-new-slide"></button>
+            <button onclick="gotoSliderTab(6)" class="select-new-slide"></button>
+        </div>
+        <img id="news-carousel-left-nav" class="carousel-left" src="images/icons/aoe4-dropdown-icon.svg" alt="News left move" />
+        <img id="news-carousel-right-nav" class="carousel-right" src="images/icons/aoe4-dropdown-icon.svg" alt="News right move" />
+    </section>
+</main>
+
 <div class="cookies" id="cookies">
     <div class="info">
         <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
@@ -384,7 +410,7 @@
         <button class="pointer" onclick="removeCookies(true)">Manage cookies</button>
     </div>
 </div>
-<p id="mess"></p>
+
 <script src="lib/fontawesome/fontawesome.min.js"></script>
 <script src="lib/gsap/gsap.min.js"></script>
 
@@ -392,14 +418,6 @@
 <script src="js/fontawesome-animations.js" defer></script>
 <script src="js/x-goto.js" defer></script>
 <script src="js/dropdown.js" defer></script>
-<script>
-    // setup animations for dropdown pointer
-
-    // feed tmp content
-    let p = document.getElementById("mess");
-    for (let i = 0; i < 100; i++) {
-        p.innerHTML += "a<br />";
-    }
-</script>
+<script src="js/news-carousel.js" defer></script>
 </body>
 </html>

@@ -12,6 +12,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 10000;
 }
 
 /* title section */
@@ -47,6 +48,7 @@ body {
     background: rgb(169,109,33);
     background: linear-gradient(142deg, rgba(169,109,33,1) 0%, rgba(255,220,96,1) 50%, rgba(169,109,33,1) 100%);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
