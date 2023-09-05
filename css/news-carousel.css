@@ -21,18 +21,22 @@ section.news-carousel {
     height: 43vw;
     overflow: hidden;
 }
-section.news-carousel>.carousel-left,.carousel-right {
+section.news-carousel>.carousel-left {
     position: absolute;
     top: 0;
     height: 100%;
     width: 40px;
     object-fit: contain;
     cursor: pointer;
-}
-section.news-carousel>.carousel-left {
     left: 10px;
 }
 section.news-carousel>.carousel-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    object-fit: contain;
+    cursor: pointer;
     right: 10px;
 }
 

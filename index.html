@@ -36,6 +36,7 @@
     <link href="css/dropdown.css" rel="stylesheet"/>
     <link href="css/gold-button.css" rel="stylesheet"/>
     <link href="css/news-carousel.css" rel="stylesheet"/>
+    <link href="css/twitch-stream.css" rel="stylesheet"/>
     <link href="css/cookies.css" rel="stylesheet"/>
     <link href="css/util.css" rel="stylesheet"/>
 
@@ -402,6 +403,33 @@
         <img id="news-carousel-left-nav" class="carousel-left" src="images/icons/aoe4-dropdown-icon.svg" alt="News left move" />
         <img id="news-carousel-right-nav" class="carousel-right" src="images/icons/aoe4-dropdown-icon.svg" alt="News right move" />
     </section>
+    <section class="twitch-stream">
+        <h2 class="item-title-stream">Live Stream</h2>
+        <div class="item-stream" style="padding-bottom: 56.25%; position: relative;">
+            <iframe style="border: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="100%" height="100%" src="https://player.twitch.tv/?channel=ageofempires&parent=localhost" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+            <!-- Powered by twitch embed generator (https://embed.tube/embed-code-generator/twitch/) -->
+        </div>
+        <h2 class="item-title-past-streams">Past Streams</h2>
+        <div class="item-past-streams">
+            <div class="lock-view">
+            <div class="slides">
+                <img src="images/past-streams/3.png" alt="Slide 3">
+                <img src="images/past-streams/2.png" alt="Slide 2">
+                <img src="images/past-streams/1.jpg" alt="Slide 1">
+            </div>
+            </div>
+            <div class="goto-slide">
+                <button onclick="gotoSliderTabPastStreams(0)" class="select-new-slide selected"></button>
+                <button onclick="gotoSliderTabPastStreams(1)" class="select-new-slide"></button>
+                <button onclick="gotoSliderTabPastStreams(2)" class="select-new-slide"></button>
+            </div>
+            <img id="past-streams-carousel-left-nav" class="carousel-left" src="images/icons/aoe4-dropdown-icon.svg" alt="Past Streams left move" />
+            <img id="past-streams-carousel-right-nav" class="carousel-right" src="images/icons/aoe4-dropdown-icon.svg" alt="Past Streams right move" />
+        </div>
+        <div class="bottom-item">
+            <img src="images/dawn-of-ages.jpg" style="height: 100%" alt="Placeholder image">
+        </div>
+    </section>
 </main>
 
 <div class="cookies" id="cookies">
@@ -433,5 +461,6 @@
 <script src="js/x-goto.js" defer></script>
 <script src="js/dropdown.js" defer></script>
 <script src="js/news-carousel.js" defer></script>
+<script src="js/past-streams-carousel.js" defer></script>
 </body>
 </html>
