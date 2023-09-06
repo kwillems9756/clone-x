@@ -23,7 +23,7 @@ function onNavUtils() {
 }
 
 function updateSliderButtons() {
-    const sliderButtons = document.querySelectorAll("section.news-carousel.goto-slide>.select-new-slide");
+    const sliderButtons = document.querySelectorAll("section.news-carousel .goto-slide>.select-new-slide");
     let id = 0;
     for(let sliderButton of sliderButtons){
         if(id === currentNavSlide){
