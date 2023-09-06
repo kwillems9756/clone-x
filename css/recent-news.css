@@ -1,0 +1,152 @@
+section.recent-news {
+    background-image: url("../images/recent-news.webp");
+    background-position: center center;
+    background-size: cover;
+    background-color: #0f1119;
+    padding: 100px 125px;
+}
+section.recent-news .limit-width {
+    width: 40vw;
+}
+section.recent-news .title {
+    font-size: xx-large;
+    display: flex;
+    gap: 30px;
+}
+section.recent-news .title * {
+    margin: 0;
+}
+section.recent-news .title .gold-button {
+    font-size: large;
+    padding-right: 36px;
+    position: relative;
+}
+section.recent-news .title .gold-button>.carousel-right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    filter: brightness(0);
+}
+section.recent-news .titled-hr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    color: #b8862d;
+    margin: 20px 0 0;
+    font-size: larger;
+}
+section.recent-news .titled-hr::before {
+    content: '';
+    border-width: 0 0 2px 0;
+    border-image-slice: 2;
+    border-image-source: linear-gradient(90deg,rgba(184,134,45,0),#b8862d,#ffdf91);
+    border-style: solid;
+    width: 40%;
+    margin-right: 10px;
+    transform: translate(0, -50%);
+}
+section.recent-news .titled-hr::after {
+    content: '';
+    border-width: 0 0 2px 0;
+    border-image-slice: 2;
+    border-image-source: linear-gradient(90deg,#ffdf91,#b8862d,rgba(184,134,45,0));
+    border-style: solid;
+    width: 40%;
+    margin-left: 10px;
+    transform: translate(0, -50%);
+}
+.news-items-recent-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.news-items-recent-news>.news-item {
+    width: 100%;
+    background-image: url(../images/menu-dropdown-overlay.webp),linear-gradient(0deg,#003456,#16668b);
+    background-blend-mode: overlay;
+    background-size: 256px,100%;
+    cursor: pointer;
+    position: relative;
+}
+.news-items-recent-news>.news-item:hover {
+    outline: 2px solid #ffdf91;
+}
+.news-items-recent-news>.news-item span {
+    display: flex;
+    transition: opacity 0.125s;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 65px;
+    height: 35px;
+    align-items: center;
+    padding-left: 5px;
+    background: rgb(24,28,41);
+    background: linear-gradient(90deg, rgba(24,28,41,1) 83%, rgba(24,28,41,0) 100%);
+    width: 75%;
+}
+.news-items-recent-news>.news-item:hover span {
+    opacity: 1;
+}
+.news-items-recent-news>.news-item img {
+    width: 100%;
+    object-fit: cover;
+}
+.news-items-recent-news>.news-item h3 {
+    margin: 5px 5px 30px 5px;
+    height: 30px;
+}
+section.recent-news .game-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    padding: 20px 0;
+}
+section.recent-news .game-selection>div {
+    background-blend-mode: overlay;
+    background-size: 256px,100%;
+    background-image: url(../images/menu-dropdown-overlay.webp),linear-gradient(180deg,#034d70,#001d34);
+    width: 100%;
+    aspect-ratio: 5 / 2;
+    position: relative;
+}
+section.recent-news .game-selection>div:hover {
+    outline: 2px solid #ffdf91;
+    cursor: pointer;
+}
+section.recent-news .game-selection>div>img {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: calc(100% - 10px);
+}
+section.recent-news .game-selection>div::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+section.recent-news .game-selection>div:nth-child(1)::after {
+    background-image: url(../images/recent-news-game-pictures/age1.webp);
+}
+section.recent-news .game-selection>div:nth-child(2)::after {
+    background-image: url(../images/recent-news-game-pictures/age2.webp);
+}
+section.recent-news .game-selection>div:nth-child(3)::after {
+    background-image: url(../images/recent-news-game-pictures/age3.webp);
+}
+section.recent-news .game-selection>div:nth-child(4)::after {
+    background-image: url(../images/recent-news-game-pictures/age4.webp);
+}
+section.recent-news .game-selection>div:nth-child(5)::after {
+    background-image: url(../images/recent-news-game-pictures/age-myth.webp);
+}
