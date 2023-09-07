@@ -95,6 +95,16 @@ a.news-item {
 .news-item:hover span {
     opacity: 1;
 }
+.news-item .bg-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-position: center center;
+    background-size: 100% 100%;
+    transition: background-size .2s;
+}
+.news-item:hover .bg-img {
+    background-size: 110% 110%;
+}
 .news-item img {
     width: 100%;
     object-fit: cover;
