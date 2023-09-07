@@ -71,6 +71,10 @@ section.recent-news .titled-hr::after {
     cursor: pointer;
     position: relative;
 }
+a.news-item {
+    text-decoration: none;
+    color: #ffdf91;
+}
 .news-item:hover {
     outline: 2px solid #ffdf91;
 }
@@ -106,7 +110,7 @@ section.recent-news .game-selection {
     width: 100%;
     padding: 20px 0;
 }
-section.recent-news .game-selection>div {
+section.recent-news .game-selection>a {
     background-blend-mode: overlay;
     background-size: 256px,100%;
     background-image: url(../images/menu-dropdown-overlay.webp),linear-gradient(180deg,#034d70,#001d34);
@@ -114,17 +118,17 @@ section.recent-news .game-selection>div {
     aspect-ratio: 5 / 2;
     position: relative;
 }
-section.recent-news .game-selection>div:hover {
+section.recent-news .game-selection>a:hover {
     outline: 2px solid #ffdf91;
     cursor: pointer;
 }
-section.recent-news .game-selection>div>img {
+section.recent-news .game-selection>a>img {
     position: absolute;
     left: 5px;
     top: 5px;
     height: calc(100% - 10px);
 }
-section.recent-news .game-selection>div::after {
+section.recent-news .game-selection>a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -135,18 +139,18 @@ section.recent-news .game-selection>div::after {
     background-position: top right;
     background-repeat: no-repeat;
 }
-section.recent-news .game-selection>div:nth-child(1)::after {
+section.recent-news .game-selection>a:nth-child(1)::after {
     background-image: url(../images/recent-news-game-pictures/age1.webp);
 }
-section.recent-news .game-selection>div:nth-child(2)::after {
+section.recent-news .game-selection>a:nth-child(2)::after {
     background-image: url(../images/recent-news-game-pictures/age2.webp);
 }
-section.recent-news .game-selection>div:nth-child(3)::after {
+section.recent-news .game-selection>a:nth-child(3)::after {
     background-image: url(../images/recent-news-game-pictures/age3.webp);
 }
-section.recent-news .game-selection>div:nth-child(4)::after {
+section.recent-news .game-selection>a:nth-child(4)::after {
     background-image: url(../images/recent-news-game-pictures/age4.webp);
 }
-section.recent-news .game-selection>div:nth-child(5)::after {
+section.recent-news .game-selection>a:nth-child(5)::after {
     background-image: url(../images/recent-news-game-pictures/age-myth.webp);
 }
