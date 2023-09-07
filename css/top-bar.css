@@ -1,7 +1,12 @@
+@font-face {
+    font-family: GentiumBookPlus;
+    src: url("../fonts/GentiumBookPlus-Regular.ttf");
+    font-display: swap;
+}
 /* body */
 body {
     margin: 0;
-    font-family: maiola,serif;
+    font-family: GentiumBookPlus,serif;
     background-color: black;
     color: white;
 }

@@ -1,6 +1,7 @@
 @font-face {
     font-family: NatoSans;
     src: url("../fonts/NotoSans-Regular.ttf");
+    font-display: swap;
 }
 .become-an-age-insider {
     padding: 100px 125px;

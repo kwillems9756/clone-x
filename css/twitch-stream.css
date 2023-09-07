@@ -88,7 +88,7 @@ section.twitch-stream>.item-past-streams .slides {
 }
 section.twitch-stream>.item-past-streams .slides img {
     width: 24vw;
-    height: 13vw;
+    aspect-ratio: 427 / 240;
 }
 section.twitch-stream>.bottom-item {
     grid-row-start: 3;
