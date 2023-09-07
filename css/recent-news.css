@@ -63,7 +63,7 @@ section.recent-news .titled-hr::after {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-.news-items-recent-news>.news-item {
+.news-item {
     width: 100%;
     background-image: url(../images/menu-dropdown-overlay.webp),linear-gradient(0deg,#003456,#16668b);
     background-blend-mode: overlay;
@@ -71,10 +71,10 @@ section.recent-news .titled-hr::after {
     cursor: pointer;
     position: relative;
 }
-.news-items-recent-news>.news-item:hover {
+.news-item:hover {
     outline: 2px solid #ffdf91;
 }
-.news-items-recent-news>.news-item span {
+.news-item span {
     display: flex;
     transition: opacity 0.125s;
     opacity: 0;
@@ -88,14 +88,14 @@ section.recent-news .titled-hr::after {
     background: linear-gradient(90deg, rgba(24,28,41,1) 83%, rgba(24,28,41,0) 100%);
     width: 75%;
 }
-.news-items-recent-news>.news-item:hover span {
+.news-item:hover span {
     opacity: 1;
 }
-.news-items-recent-news>.news-item img {
+.news-item img {
     width: 100%;
     object-fit: cover;
 }
-.news-items-recent-news>.news-item h3 {
+.news-item h3 {
     margin: 5px 5px 30px 5px;
     height: 30px;
 }

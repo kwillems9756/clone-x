@@ -1,0 +1,21 @@
+section.trailers,section.get-new-gear {
+    padding: 100px 125px;
+    margin: 0;
+}
+section.trailers>h3,
+section.get-new-gear>h3
+{
+    font-size: xx-large;
+}
+section.trailers .wrapper,
+section.get-new-gear .wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 45px;
+}
+section.get-new-gear {
+    background-image: url("../images/get-new-gear.webp");
+    background-position: center center;
+    background-size: cover;
+}
