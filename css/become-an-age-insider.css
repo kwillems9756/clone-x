@@ -45,6 +45,9 @@
     color: #53dbdd;
     font-size: smaller;
 }
+.become-an-age-insider a:hover {
+    filter: brightness(1.5);
+}
 .become-an-age-insider li:not(:last-child) {
     margin-bottom: 20px;
 }

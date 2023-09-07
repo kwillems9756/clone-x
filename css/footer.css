@@ -1,0 +1,44 @@
+footer {
+    padding: 0 50px;
+    background-color: black;
+    background-image: url("../images/menu-dropdown-woosh.webp");
+    background-size: cover;
+    background-position: center center;
+    font-size: large;
+}
+footer .logos {
+    display: flex;
+    height: 20vh;
+    gap: 10px;
+    padding: 50px 0;
+}
+footer .logos .age-restrictions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+footer .logos img {
+    height: 20vh;
+    width: 100%;
+    object-fit: contain;
+}
+footer .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 75px;
+    text-shadow: 0 0 8px #000000;
+}
+footer .copy-right {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #53dbdd;
+}
+footer a:hover {
+    filter: brightness(1.5);
+}
